@@ -57,6 +57,8 @@
 		"check:type": "tsc",
 		"clean": "rimraf wrangler-dist miniflare-dist emitted-types",
 		"dev": "pnpm run clean && concurrently -c black,blue --kill-others-on-fail false \"pnpm run bundle --watch\" \"pnpm run check:type --watch --preserveWatchOutput\"",
+        "predist": "pnpm install && pnpm run prepublishOnly",
+        "dist": "node dist.js",
 		"emit-types": "tsc -p tsconfig.emit.json && node -r esbuild-register scripts/emit-types.ts",
 		"generate-json-schema": "pnpm exec ts-json-schema-generator --no-type-check --path src/config/config.ts --type RawConfig --out config-schema.json",
 		"prepublishOnly": "SOURCEMAPS=false pnpm run -w build",
@@ -89,6 +91,7 @@
 		"xxhash-wasm": "^1.0.1"
 	},
 	"devDependencies": {
+        "bun": "1",
 		"@cloudflare/cli": "workspace:*",
 		"@cloudflare/eslint-config-worker": "workspace:*",
 		"@cloudflare/pages-shared": "workspace:^",

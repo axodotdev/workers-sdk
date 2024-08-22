@@ -194,6 +194,12 @@ packages/wrangler-devtools/depot
 packages/wrangler-devtools/devtools-frontend
 packages/miniflare/dist-types/
 
+target
+packages/wrangler/wrangler
+packages/wrangler/wrangler-dist
+packages/wrangler/wrangler2
+
+
 fixtures/remix-pages-app/public/build
 fixtures/remix-pages-app/functions/\[\[path\]\].js
 

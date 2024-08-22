@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+console.log("hello from bin/wrangler");
+
 const { spawn } = require("child_process");
 const path = require("path");
 const fs = require("fs");

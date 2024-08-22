@@ -1,3 +1,5 @@
+console.log("hello");
+
 import module from "node:module";
 import os from "node:os";
 import TOML from "@iarna/toml";
